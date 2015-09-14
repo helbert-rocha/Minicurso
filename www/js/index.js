@@ -16,6 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+var minicurso;
 var app = {
     // Application Constructor
     initialize: function() {
@@ -27,6 +28,7 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
+        minicurso = angular.module('Minicurso', ['ngMaterial', 'ngCordova']);
     },
     // deviceready Event Handler
     //
@@ -49,3 +51,81 @@ var app = {
 };
 
 app.initialize();
+
+minicurso.controller('MenuCtrl', function() {
+    this.topDirections = ['left', 'up'];
+    this.bottomDirections = ['down', 'right'];
+    this.isOpen = false;
+    this.availableModes = ['md-fling', 'md-scale'];
+    this.selectedMode = 'md-fling';
+    this.availableDirections = ['up', 'down', 'left', 'right'];
+    this.selectedDirection = 'up';
+});
+
+minicurso.controller('PictureCtrl', function($scope, $cordovaCamera) {
+
+    $scope.getPhoto = function(){
+        var options = {
+            quality: 100,
+            destinationType: Camera.DestinationType.DATA_URL,
+            sourceType: Camera.PictureSourceType.CAMERA,
+            allowEdit: true,
+            encodingType: Camera.EncodingType.JPEG,
+            targetWidth: 100,
+            targetHeight: 100,
+            popoverOptions: CameraPopoverOptions,
+            saveToPhotoAlbum: true
+        };
+
+        $cordovaCamera.getPicture(options).then(function(imageData) {
+            var image = document.getElementById('myImage');
+            image.src = "data:image/jpeg;base64," + imageData;
+        }, function(err) {
+            // error
+        });
+    }
+});
+
+minicurso.controller('GeoCtrl', function($scope, $cordovaGeolocation) {
+
+    $scope.getGeo = function () {
+
+        var posOptions = {timeout: 10000, enableHighAccuracy: false};
+        $cordovaGeolocation
+            .getCurrentPosition(posOptions)
+            .then(function (position) {
+                var lat = position.coords.latitude
+                var long = position.coords.longitude
+            }, function (err) {
+                // error
+            });
+
+
+        var watchOptions = {
+            frequency: 1000,
+            timeout: 3000,
+            enableHighAccuracy: false // may cause errors if true
+        };
+
+        var watch = $cordovaGeolocation.watchPosition(watchOptions);
+        watch.then(
+            null,
+            function (err) {
+                // error
+            },
+            function (position) {
+                var lat = position.coords.latitude
+                var long = position.coords.longitude
+            });
+
+
+        watch.clearWatch();
+        // OR
+        $cordovaGeolocation.clearWatch(watch)
+            .then(function (result) {
+                // success
+            }, function (error) {
+                // error
+            });
+    }
+});
