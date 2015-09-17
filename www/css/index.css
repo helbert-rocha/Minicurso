@@ -16,3 +16,7 @@
 .icon {
     color: black;
 }
+
+#map {
+    height: 100%;
+}

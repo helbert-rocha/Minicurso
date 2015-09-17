@@ -16,6 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+var minicurso;
 var app = {
     // Application Constructor
     initialize: function() {
@@ -27,6 +28,7 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
+        minicurso = angular.module('Minicurso', ['ngMaterial', 'ngCordova']);
     },
     // deviceready Event Handler
     //
@@ -49,3 +51,68 @@ var app = {
 };
 
 app.initialize();
+
+minicurso.controller('MenuCtrl', function() {
+    this.topDirections = ['left', 'up'];
+    this.bottomDirections = ['down', 'right'];
+    this.isOpen = false;
+    this.availableModes = ['md-fling', 'md-scale'];
+    this.selectedMode = 'md-fling';
+    this.availableDirections = ['up', 'down', 'left', 'right'];
+    this.selectedDirection = 'up';
+});
+
+minicurso.controller('PictureCtrl', function($scope, $cordovaCamera) {
+
+    $scope.getPhoto = function(){
+        var options = {
+            quality: 100,
+            destinationType: Camera.DestinationType.DATA_URL,
+            sourceType: Camera.PictureSourceType.CAMERA,
+            allowEdit: true,
+            encodingType: Camera.EncodingType.JPEG,
+            targetWidth: 100,
+            targetHeight: 100,
+            popoverOptions: CameraPopoverOptions,
+            saveToPhotoAlbum: true
+        };
+
+        $cordovaCamera.getPicture(options).then(function(imageData) {
+            var image = document.getElementById('myImage');
+            image.src = "data:image/jpeg;base64," + imageData;
+        }, function(err) {
+            // error
+        });
+    }
+});
+
+minicurso.controller('GeoCtrl', function($scope, $cordovaGeolocation) {
+
+    $scope.getGeo = function () {
+
+        var posOptions = {timeout: 10000, enableHighAccuracy: true};
+        $cordovaGeolocation
+            .getCurrentPosition(posOptions)
+            .then(function (position) {
+                $scope.coords = position.coords;
+                showMap(position.coords);
+            }, function (err) {
+                alert(err);
+            });
+
+        function showMap(coords) {
+            var myLatLng = {lat: coords.latitude, lng: coords.longitude};
+
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 4,
+                center: myLatLng
+            });
+
+            var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                title: 'Eu!'
+            });
+        }
+    }
+});

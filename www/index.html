@@ -42,6 +42,9 @@
         <script type="text/javascript" src="bower_components/angular-material/angular-material.min.js"></script>
         <script type="text/javascript" src="bower_components/ngCordova/dist/ng-cordova.min.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js"
+                async defer>
+        </script>
         <title>Minicurso</title>
     </head>
     <body>
@@ -71,18 +74,21 @@
                                     </md-fab-trigger>
                                     <md-fab-actions>
                                         <div ng-controller="GeoCtrl">
-                                            <md-button aria-label="Route" class="md-fab md-raised md-mini md-primary">
-                                                <md-icon class="mdi mdi-routes mdi-24px" ng-click="getGeo()"></md-icon>
+                                            <md-button aria-label="Route" class="md-fab md-raised md-mini md-primary" ng-click="getGeo()">
+                                                <md-icon class="mdi mdi-routes mdi-24px" ></md-icon>
                                             </md-button>
                                         </div>
                                         <div ng-controller="PictureCtrl">
-                                            <md-button aria-label="Camera" class="md-fab md-raised md-mini md-primary">
-                                                <md-icon class="mdi mdi-camera mdi-24px" ng-click="getPhoto()"></md-icon>
+                                            <md-button aria-label="Camera" class="md-fab md-raised md-mini md-primary" ng-click="getPhoto()"">
+                                                <md-icon class="mdi mdi-camera mdi-24px"></md-icon>
                                             </md-button>
                                         </div>
                                     </md-fab-actions>
                                 </md-fab-speed-dial>
                             </div>
+
+                            <div id="map"></div>
+
                         </md-content>
                     </div>
                 </md-card-content>

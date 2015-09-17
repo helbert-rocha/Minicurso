@@ -90,42 +90,29 @@ minicurso.controller('GeoCtrl', function($scope, $cordovaGeolocation) {
 
     $scope.getGeo = function () {
 
-        var posOptions = {timeout: 10000, enableHighAccuracy: false};
+        var posOptions = {timeout: 10000, enableHighAccuracy: true};
         $cordovaGeolocation
             .getCurrentPosition(posOptions)
             .then(function (position) {
-                var lat = position.coords.latitude
-                var long = position.coords.longitude
+                $scope.coords = position.coords;
+                showMap(position.coords);
             }, function (err) {
-                // error
+                alert(err);
             });
 
+        function showMap(coords) {
+            var myLatLng = {lat: coords.latitude, lng: coords.longitude};
 
-        var watchOptions = {
-            frequency: 1000,
-            timeout: 3000,
-            enableHighAccuracy: false // may cause errors if true
-        };
-
-        var watch = $cordovaGeolocation.watchPosition(watchOptions);
-        watch.then(
-            null,
-            function (err) {
-                // error
-            },
-            function (position) {
-                var lat = position.coords.latitude
-                var long = position.coords.longitude
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 4,
+                center: myLatLng
             });
 
-
-        watch.clearWatch();
-        // OR
-        $cordovaGeolocation.clearWatch(watch)
-            .then(function (result) {
-                // success
-            }, function (error) {
-                // error
+            var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                title: 'Eu!'
             });
+        }
     }
 });
