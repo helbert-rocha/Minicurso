@@ -2,46 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="608bf49a-23a7-48c2-ad05-e6537f3edd03" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/org.apache.cordova.geolocation/CONTRIBUTING.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/org.apache.cordova.geolocation/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/org.apache.cordova.geolocation/NOTICE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/org.apache.cordova.geolocation/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/org.apache.cordova.geolocation/RELEASENOTES.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/org.apache.cordova.geolocation/doc/de/index.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/org.apache.cordova.geolocation/doc/es/index.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/org.apache.cordova.geolocation/doc/fr/index.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/org.apache.cordova.geolocation/doc/index.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/org.apache.cordova.geolocation/doc/it/index.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/org.apache.cordova.geolocation/doc/ja/index.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/org.apache.cordova.geolocation/doc/ko/index.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/org.apache.cordova.geolocation/doc/pl/index.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/org.apache.cordova.geolocation/doc/ru/index.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/org.apache.cordova.geolocation/doc/zh/index.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/org.apache.cordova.geolocation/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/org.apache.cordova.geolocation/plugin.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/org.apache.cordova.geolocation/src/firefoxos/GeolocationProxy.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/org.apache.cordova.geolocation/src/ios/CDVLocation.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/org.apache.cordova.geolocation/src/ios/CDVLocation.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/org.apache.cordova.geolocation/src/ubuntu/geolocation.cpp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/org.apache.cordova.geolocation/src/ubuntu/geolocation.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/org.apache.cordova.geolocation/src/windows/GeolocationProxy.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/org.apache.cordova.geolocation/src/wp/GeoLocation.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/org.apache.cordova.geolocation/tests/plugin.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/org.apache.cordova.geolocation/tests/tests.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/org.apache.cordova.geolocation/www/Coordinates.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/org.apache.cordova.geolocation/www/Position.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/org.apache.cordova.geolocation/www/PositionError.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/org.apache.cordova.geolocation/www/blackberry10/GeolocationProxy.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plugins/org.apache.cordova.geolocation/www/geolocation.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/AndroidManifest.xml" afterPath="$PROJECT_DIR$/platforms/android/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/android.json" afterPath="$PROJECT_DIR$/plugins/android.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/res/xml/config.xml" afterPath="$PROJECT_DIR$/platforms/android/res/xml/config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/cordova_plugins.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/cordova_plugins.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugins/fetch.json" afterPath="$PROJECT_DIR$/plugins/fetch.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/platforms/android/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/platforms/android/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/platforms/android/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/platforms/android/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/index.html" afterPath="$PROJECT_DIR$/platforms/android/assets/www/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/platforms/android/assets/www/js/index.js" afterPath="$PROJECT_DIR$/platforms/android/assets/www/js/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/index.js" afterPath="$PROJECT_DIR$/www/js/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="minicurso.iws" />
@@ -66,8 +32,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.61835104">
-              <caret line="75" column="68" selection-start-line="75" selection-start-column="68" selection-end-line="75" selection-end-column="68" />
+            <state vertical-scroll-proportion="0.75797874">
+              <caret line="38" column="8" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -616,8 +582,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.61835104">
-          <caret line="75" column="68" selection-start-line="75" selection-start-column="68" selection-end-line="75" selection-end-column="68" />
+        <state vertical-scroll-proportion="0.75797874">
+          <caret line="38" column="8" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
           <folding />
         </state>
       </provider>
