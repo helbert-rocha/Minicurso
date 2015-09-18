@@ -23,10 +23,11 @@
         "is_top_level": true,
         "variables": {}
     },
-    "org.apache.cordova.geolocation": {
+    "com.synconset.imagepicker": {
         "source": {
-            "type": "registry",
-            "id": "org.apache.cordova.geolocation"
+            "type": "git",
+            "url": "https://github.com/wymsee/cordova-imagePicker.git",
+            "subdir": "."
         },
         "is_top_level": true,
         "variables": {}

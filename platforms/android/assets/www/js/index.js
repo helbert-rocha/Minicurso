@@ -86,33 +86,24 @@ minicurso.controller('PictureCtrl', function($scope, $cordovaCamera) {
     }
 });
 
-minicurso.controller('GeoCtrl', function($scope, $cordovaGeolocation) {
+minicurso.controller('ImagePickerCtrl', function($scope, $cordovaImagePicker) {
 
-    $scope.getGeo = function () {
+    $scope.imagePicker = function() {
 
-        var posOptions = {timeout: 10000, enableHighAccuracy: true};
-        $cordovaGeolocation
-            .getCurrentPosition(posOptions)
-            .then(function (position) {
-                $scope.coords = position.coords;
-                showMap(position.coords);
-            }, function (err) {
-                alert(err);
+        var options = {
+            maximumImagesCount: 10,
+            width: 800,
+            height: 800,
+            quality: 80
+        };
+
+        $cordovaImagePicker.getPictures(options)
+            .then(function (results) {
+                for (var i = 0; i < results.length; i++) {
+                    console.log('Image URI: ' + results[i]);
+                }
+            }, function(error) {
+                // error getting photos
             });
-
-        function showMap(coords) {
-            var myLatLng = {lat: coords.latitude, lng: coords.longitude};
-
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 4,
-                center: myLatLng
-            });
-
-            var marker = new google.maps.Marker({
-                position: myLatLng,
-                map: map,
-                title: 'Eu!'
-            });
-        }
     }
 });

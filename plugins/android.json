@@ -31,6 +31,10 @@
                         {
                             "xml": "<feature name=\"Camera\"><param name=\"android-package\" value=\"org.apache.cordova.camera.CameraLauncher\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"ImagePicker\"><param name=\"android-package\" value=\"com.synconset.ImagePicker\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -49,13 +53,17 @@
                         {
                             "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
                             "count": 1
-                        },
+                        }
+                    ],
+                    "/manifest/application": [
                         {
-                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\" />",
+                            "xml": "<activity android:label=\"@string/multi_app_name\" android:name=\"com.synconset.MultiImageChooserActivity\" android:theme=\"@android:style/Theme.Holo.Light\"></activity>",
                             "count": 1
-                        },
+                        }
+                    ],
+                    "/manifest": [
                         {
-                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\" />",
+                            "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
                             "count": 1
                         }
                     ]
@@ -73,7 +81,7 @@
         "org.apache.cordova.camera": {
             "PACKAGE_NAME": "com.utfpr.minicurso"
         },
-        "org.apache.cordova.geolocation": {
+        "com.synconset.imagepicker": {
             "PACKAGE_NAME": "com.utfpr.minicurso"
         }
     },

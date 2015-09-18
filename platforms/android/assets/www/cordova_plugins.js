@@ -32,6 +32,13 @@ module.exports = [
         "clobbers": [
             "CameraPopoverHandle"
         ]
+    },
+    {
+        "file": "plugins/com.synconset.imagepicker/www/imagepicker.js",
+        "id": "com.synconset.imagepicker.ImagePicker",
+        "clobbers": [
+            "plugins.imagePicker"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -40,7 +47,7 @@ module.exports.metadata =
     "cordova-plugin-whitelist": "1.0.0",
     "cordova-plugin-crosswalk-webview": "1.3.1",
     "org.apache.cordova.camera": "0.3.6",
-    "org.apache.cordova.geolocation": "0.3.12"
+    "com.synconset.imagepicker": "1.0.6"
 }
 // BOTTOM OF METADATA
 });
