@@ -34,10 +34,11 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/com.synconset.imagepicker/www/imagepicker.js",
-        "id": "com.synconset.imagepicker.ImagePicker",
-        "clobbers": [
-            "plugins.imagePicker"
+        "file": "plugins/org.apache.cordova.vibration/www/vibration.js",
+        "id": "org.apache.cordova.vibration.notification",
+        "merges": [
+            "navigator.notification",
+            "navigator"
         ]
     }
 ];
@@ -45,9 +46,8 @@ module.exports.metadata =
 // TOP OF METADATA
 {
     "cordova-plugin-whitelist": "1.0.0",
-    "cordova-plugin-crosswalk-webview": "1.3.1",
     "org.apache.cordova.camera": "0.3.6",
-    "com.synconset.imagepicker": "1.0.6"
+    "org.apache.cordova.vibration": "0.3.13"
 }
 // BOTTOM OF METADATA
 });

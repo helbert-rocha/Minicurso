@@ -13,27 +13,11 @@
                             "count": 1
                         },
                         {
-                            "xml": "<preference name=\"webView\" value=\"org.crosswalk.engine.XWalkWebViewEngine\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<preference default=\"14+\" name=\"xwalkVersion\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<preference default=\"--disable-pull-to-refresh-effect\" name=\"xwalkCommandLine\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<preference default=\"embedded\" name=\"xwalkMode\" />",
-                            "count": 1
-                        },
-                        {
                             "xml": "<feature name=\"Camera\"><param name=\"android-package\" value=\"org.apache.cordova.camera.CameraLauncher\" /></feature>",
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"ImagePicker\"><param name=\"android-package\" value=\"com.synconset.ImagePicker\" /></feature>",
+                            "xml": "<feature name=\"Vibration\"><param name=\"android-package\" value=\"org.apache.cordova.vibration.Vibration\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -43,27 +27,14 @@
                 "parents": {
                     "/*": [
                         {
-                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\" />",
-                            "count": 1
-                        },
-                        {
                             "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
                             "count": 1
                         }
                     ],
-                    "/manifest/application": [
-                        {
-                            "xml": "<activity android:label=\"@string/multi_app_name\" android:name=\"com.synconset.MultiImageChooserActivity\" android:theme=\"@android:style/Theme.Holo.Light\"></activity>",
-                            "count": 1
-                        }
-                    ],
+                    "/manifest/application": [],
                     "/manifest": [
                         {
-                            "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+                            "xml": "<uses-permission android:name=\"android.permission.VIBRATE\" />",
                             "count": 1
                         }
                     ]
@@ -75,13 +46,10 @@
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.utfpr.minicurso"
         },
-        "cordova-plugin-crosswalk-webview": {
-            "PACKAGE_NAME": "com.utfpr.minicurso"
-        },
         "org.apache.cordova.camera": {
             "PACKAGE_NAME": "com.utfpr.minicurso"
         },
-        "com.synconset.imagepicker": {
+        "org.apache.cordova.vibration": {
             "PACKAGE_NAME": "com.utfpr.minicurso"
         }
     },

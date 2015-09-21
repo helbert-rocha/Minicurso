@@ -1,0 +1,18 @@
+2015-09-18 01:29:46.711 Minicurso[21588:3624408] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/helbert/Library/Developer/CoreSimulator/Devices/C429E02F-49ED-4410-A736-7C3319BAE770/data/Containers/Data/Application/241CEC3C-CB14-4510-8ECC-BCE1D3EC70BF/Library/Cookies/Cookies.binarycookies
+2015-09-18 01:29:46.815 Minicurso[21588:3624408] Apache Cordova native platform version 3.9.1 is starting.
+2015-09-18 01:29:46.816 Minicurso[21588:3624408] Multi-tasking -> Device: YES, App: YES
+2015-09-18 01:29:46.819 Minicurso[21588:3624408] Unlimited access to network resources
+2015-09-18 01:29:46.822 Minicurso[21588:3624408] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-09-18 01:29:47.227 Minicurso[21588:3624408] Resetting plugins due to page load.
+2015-09-18 01:29:47.720 Minicurso[21588:3624408] Finished load of: file:///Users/helbert/Library/Developer/CoreSimulator/Devices/C429E02F-49ED-4410-A736-7C3319BAE770/data/Containers/Bundle/Application/66115A72-7DC6-44B1-B8AB-EF0DB8F0A43C/Minicurso.app/www/index.html
+2015-09-18 01:29:53.011 Minicurso[21588:3624460] Camera.getPicture: source type 1 not available.
+2015-09-18 01:29:54.903 Minicurso[21588:3624408] THREAD WARNING: ['ImagePicker'] took '28.439941' ms. Plugin should use a background thread.
+2015-09-18 01:30:11.528 Minicurso[21588:3624456] Camera.getPicture: source type 1 not available.
+2015-09-18 01:30:17.842 Minicurso[21588:3624408] THREAD WARNING: ['ImagePicker'] took '13.879150' ms. Plugin should use a background thread.

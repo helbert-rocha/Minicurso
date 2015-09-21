@@ -67,43 +67,28 @@ minicurso.controller('PictureCtrl', function($scope, $cordovaCamera) {
     $scope.getPhoto = function(){
         var options = {
             quality: 100,
-            destinationType: Camera.DestinationType.DATA_URL,
+            destinationType: Camera.DestinationType.DATA_URI,
             sourceType: Camera.PictureSourceType.CAMERA,
-            allowEdit: true,
+            allowEdit: false,
             encodingType: Camera.EncodingType.JPEG,
-            targetWidth: 100,
-            targetHeight: 100,
             popoverOptions: CameraPopoverOptions,
             saveToPhotoAlbum: true
         };
 
-        $cordovaCamera.getPicture(options).then(function(imageData) {
+        $cordovaCamera.getPicture(options).then(function(imageURI) {
             var image = document.getElementById('myImage');
-            image.src = "data:image/jpeg;base64," + imageData;
+            image.src = imageURI;
+
         }, function(err) {
             // error
         });
     }
 });
 
-minicurso.controller('ImagePickerCtrl', function($scope, $cordovaImagePicker) {
+minicurso.controller('VibrateCtrl', function($scope, $cordovaVibration) {
 
-    $scope.imagePicker = function() {
-
-        var options = {
-            maximumImagesCount: 10,
-            width: 800,
-            height: 800,
-            quality: 80
-        };
-
-        $cordovaImagePicker.getPictures(options)
-            .then(function (results) {
-                for (var i = 0; i < results.length; i++) {
-                    console.log('Image URI: ' + results[i]);
-                }
-            }, function(error) {
-                // error getting photos
-            });
+    $.scope.setVibration = function() {
+        // Vibrate 100ms
+        $cordovaVibration.vibrate(100);
     }
 });

@@ -5,15 +5,8 @@
         <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
         <param name="onload" value="true" />
     </feature>
-    <preference name="webView" value="org.crosswalk.engine.XWalkWebViewEngine" />
-    <preference default="14+" name="xwalkVersion" />
-    <preference default="--disable-pull-to-refresh-effect" name="xwalkCommandLine" />
-    <preference default="embedded" name="xwalkMode" />
     <feature name="Camera">
         <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
-    </feature>
-    <feature name="ImagePicker">
-        <param name="android-package" value="com.synconset.ImagePicker" />
     </feature>
     <allow-intent href="market:*" />
     <name>Minicurso</name>
@@ -34,4 +27,7 @@
     <preference name="xwalkVersion" value="14+" />
     <preference name="xwalkCommandLine" value="--disable-pull-to-refresh-effect" />
     <preference name="xwalkMode" value="embedded" />
+    <feature name="Vibration">
+        <param name="android-package" value="org.apache.cordova.vibration.Vibration" />
+    </feature>
 </widget>
